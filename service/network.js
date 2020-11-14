@@ -1,15 +1,27 @@
 import {
-  baseURL
+  baseURL,
+  timeout
 } from './config'
 
-export default function(options){
+function request(options){
+  wx.showLoading({
+    title: '数据加载中ing',
+  })
   return new Promise((resolve, reject) => {
     wx.request({
-      url: options.url,
+      url: baseURL + options.url,
+      timeout: timeout,
       method: options.method || 'GET',
       data: options.data || {},
-      success : resolve,
-      fail: reject
+      success : function(res){
+        resolve(res.data)
+      },
+      fail: reject,
+      complete: res => {
+        wx.hideLoading()
+      }
     })
   })
 }
+
+export default request

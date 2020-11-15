@@ -1,13 +1,10 @@
-// pages/home/childCpns/w-recomend.js
+// components/w-back-top/w-back-top.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    recommends : {
-      type : Array,
-      value : []
-    }
+
   },
 
   /**
@@ -21,8 +18,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onImageLoad(){
-      this.triggerEvent('imageLoad', {}, {})
-    }
+
   }
 })

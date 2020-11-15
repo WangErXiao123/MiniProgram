@@ -1,12 +1,12 @@
-// pages/home/childCpns/w-recomend.js
+// components/w-goods/w-goods.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    recommends : {
-      type : Array,
-      value : []
+    goodslist: {
+      type: Array,
+      value: []
     }
   },
 
@@ -21,8 +21,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onImageLoad(){
-      this.triggerEvent('imageLoad', {}, {})
-    }
+    
   }
 })

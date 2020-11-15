@@ -19,7 +19,7 @@
     <w-tab-control class="tab-control" titles="{{titles}}"
                     bind:tabclick="tabClick"/>
     <w-goods goodslist="{{goods[currentTpye].list}}" />
-    <w-back-top bindtab="onBackTop" wx:if="{{showBacktop}}"/>
+    <w-back-top bindtap="onBackTop" wx:if="{{showBackTop}}"/>
 
   </scroll-view>
 </view>
@@ -28,8 +28,3 @@
 
 
 
-
-<!-- 3.展示本周流行 -->
-<view class="popular">
-  <image src="/assets/images/home/recommend_bg.jpg" />
-</view>

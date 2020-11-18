@@ -1,5 +1,5 @@
 <view class="home">
-  <view hidden="{{!ShowTabControl}}">
+  <view hidden="{{!showTabControl}}">
     <w-tab-control class="tab-control-temp"
                    titles="{{titles}}"
                    bind:tabclick="{{tabClick}}"/>

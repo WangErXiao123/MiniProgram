@@ -35,7 +35,7 @@ Page({
   loadMore(){
     this._getProductData(this.data.currentType)
   },
-  socalPosition(e){
+  scrollPosition(e){
     const position = e.detail.scrollTop;
     this.setData({
       showBackTop: position > BACK_TOP_POSITION
@@ -53,6 +53,8 @@ Page({
         tabControlTop: rect.top
       })
     }).exec()
+  },
+  onPageScroll(res) {
   },
   tabClick(e){
     let currentType = '';
@@ -108,7 +110,7 @@ Page({
       const list = res.data.list;
       const goods= this.data.goods;
       goods[type].list.push(...list)
-      goods[type].page + 1;
+      goods[type].page += 1;
       this.setData({
         goods:goods,
       })
